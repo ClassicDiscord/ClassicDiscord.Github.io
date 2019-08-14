@@ -3,628 +3,720 @@
 
 <head>
     <script>
-    // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
-$(window).on("load resize ", function() {
-  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-  $('.tbl-header').css({'padding-right':scrollWidth});
-}).resize();
+        // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+        $(window).on("load resize ", function () {
+            var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+            $('.tbl-header').css({ 'padding-right': scrollWidth });
+        }).resize();
     </script>
 
-<style>
-    
-h1{
-  font-size: 30px;
-  color: #000;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-align: center;
-  margin-bottom: 15px;
-  padding-top:50px;
-}
+    <style>
+        h1 {
+            font-size: 30px;
+            color: #000;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 15px;
+            padding-top: 50px;
+        }
 
 
-table{
-  width:100%;
-  table-layout: fixed;
-}
-.tbl-header{
-  background-color: rgba(255,255,255,0.3);
- }
-.tbl-content{
-  height:100%;
-  overflow-x:auto;
-  margin-top: 0px;
-  border: 1px solid rgba(255,255,255,0.3);
-}
-th{
-  padding: 20px 15px;
-  text-align: left;
-  font-weight: 500;
-  font-size: 20px;
-  color: #000;
-  text-transform: uppercase;
-}
-td{
-  padding: 15px;
-  text-align: left;
-  vertical-align:middle;
-  font-weight: 300;
-  font-size: 16px;
-  color: #000;
-  border-bottom: solid 1px rgba(255,255,255,0.1);
-}
+        table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .tbl-header {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .tbl-content {
+            height: 100%;
+            overflow-x: auto;
+            margin-top: 0px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        th {
+            padding: 20px 15px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 20px;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: middle;
+            font-weight: 300;
+            font-size: 16px;
+            color: #000;
+            border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+        }
 
 
-/* demo styles */
+        /* demo styles */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-body{
-  background: -webkit-linear-gradient(left, #fafafa, #fafafa);
-  background: linear-gradient(to right, #d4d4d4, #d4d4d4);
-  font-family: 'Roboto', sans-serif;
-}
-section{
-  margin: 50px;
-}
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+        body {
+            background: -webkit-linear-gradient(left, #fafafa, #fafafa);
+            background: linear-gradient(to right, #d4d4d4, #d4d4d4);
+            font-family: 'Roboto', sans-serif;
+        }
 
-/* for custom scrollbar for webkit browser*/
+        section {
+            margin: 50px;
+        }
 
-::-webkit-scrollbar {
-    width: 6px;
-} 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-} 
-::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-}
-</style>
+        /* for custom scrollbar for webkit browser*/
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
+
 <body>
 
- <p style="text-align: center;">
+    <p style="text-align: center;">
         <strong>ClassicDiscord.com Server List</strong>
     </p>
     <p style="text-align: center;">
         <em>Your suggestions are welcomed!! Please post on the
             <a href="http://support.classicdiscord.com" style="font-size:22px;color:rgb(40, 77, 102);">&nbsp;Official Blizzard Forum Thread&nbsp;</a>
-            </p><p style="text-align: center;">Feel free to join our Discord <a href="http://support.classicdiscord.com" style="font-size:22px;color:rgb(40, 77, 102);">&nbsp;Support Server&nbsp;</a> as well.</em>
-        </p>
-<p style="text-align: center;">
-Quick US Navigation Links->  <a href="#apvp">American PVP |</a> <a href="#apve">American PvE |</a> <a href="#arp">American RP |</a> 
-<a href="#aus">Oceanic Realms |</a>
-</p>
+    </p>
+    <p style="text-align: center;">Feel free to join our Discord
+        <a href="http://support.classicdiscord.com" style="font-size:22px;color:rgb(40, 77, 102);">&nbsp;Support Server&nbsp;</a> as well.</em>
+    </p>
+    <p style="text-align: center;">
+        Quick US Navigation Links->
+        <a href="#apvp">American PVP |</a>
+        <a href="#apve">American PvE |</a>
+        <a href="#arp">American RP |</a>
+        <a href="#aus">Oceanic Realms |</a>
+    </p>
 
-<p style="text-align: center;">
-Quick EU Navigation Links->  <a href="#eupvp">EU PvP |</a> <a href="#eupve">EU PvE | </a><a href="#eurp">EU RP |</a>
-</p>
+    <p style="text-align: center;">
+        Quick EU Navigation Links->
+        <a href="#eupvp">EU PvP |</a>
+        <a href="#eupve">EU PvE | </a>
+        <a href="#eurp">EU RP |</a>
+    </p>
 
-<p style="text-align: center;">
-Quick Other Navigation Links-> <a href="#cls">Class Discords |</a> <a href="#etc">Other Resources |</a>
-</p>  
+    <p style="text-align: center;">
+        Quick Other Navigation Links->
+        <a href="#cls">Class Discords |</a>
+        <a href="#etc">Other Resources |</a>
+    </p>
 
 
 
-<section id = "apvp">
+    <section id="apvp">
         <!--for demo wrap-->
         <h1>American PvP Realms</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Server Name</th>
-                <th>Server Timezone</th>
-                <th>Population</th>
-                <th>Server Attraction</th>
-                <th>Server Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Server Name</th>
+                        <th>Server Timezone</th>
+                        <th>Population</th>
+                        <th>Server Attraction</th>
+                        <th>Server Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Herod</td>
-                <td>EST</td>
-                <td>High Population </td>
-                <td>"The People's Extreme PvP Server"</td>
-                <td><a href="http://herod.classicdiscord.com">http://herod.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Herod</td>
+                        <td>EST</td>
+                        <td>High Population </td>
+                        <td>"The People's Extreme PvP Server"</td>
+                        <td>
+                            <a href="http://herod.classicdiscord.com">http://herod.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Faerlina</td>
-                <td>EST</td>
-                <td>High Population </td>
-                <td>"The Twitch Streamers' PvP Server"</td>
-                <td><a href="http://faerlina.classicdiscord.com">http://faerlina.classicdiscord.com</a></td>
-              </tr>
-              
-              <tr>
-                <td>Whitemane</td>
-                <td>PST</td>
-                <td>High Population </td>
-                <td>"The West Coast Extreme PvP Server"</td>
-                <td><a href="http://whitemane.classicdiscord.com">http://whitemane.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Faerlina</td>
+                        <td>EST</td>
+                        <td>High Population </td>
+                        <td>"The Twitch Streamers' PvP Server"</td>
+                        <td>
+                            <a href="http://faerlina.classicdiscord.com">http://faerlina.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Thalnos</td>
-                <td>EST</td>
-                <td>Medium Population</td>
-                <td>"Brazillian + South American PvP Server"</td>
-                <td><a href="http://thalnos.classicdiscord.com">http://thalnos.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Whitemane</td>
+                        <td>PST</td>
+                        <td>High Population </td>
+                        <td>"The West Coast Extreme PvP Server"</td>
+                        <td>
+                            <a href="http://whitemane.classicdiscord.com">http://whitemane.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Fairbanks</td>
-                <td>PST</td>
-                <td>Medium Population</td>
-                <td>"Chill PvP Players who defied server-hype, and won"</td>
-                <td><a href="http://thalnos.classicdiscord.com">http://thalnos.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Thalnos</td>
+                        <td>EST</td>
+                        <td>Medium Population</td>
+                        <td>"Brazillian + South American PvP Server"</td>
+                        <td>
+                            <a href="http://thalnos.classicdiscord.com">http://thalnos.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                    <tr>
+                        <td>Fairbanks</td>
+                        <td>PST</td>
+                        <td>Medium Population</td>
+                        <td>"Chill PvP Players who defied server-hype, and won"</td>
+                        <td>
+                            <a href="http://thalnos.classicdiscord.com">http://thalnos.classicdiscord.com</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
-      </section>
-      <!--End of pvp realms -->
+    </section>
+    <!--End of pvp realms -->
 
-       <section id ="apve">
+    <section id="apve">
         <!--for demo wrap-->
         <h1>American PvE Realms</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Server Name</th>
-                <th>Server Timezone</th>
-                <th>Population</th>
-                <th>Server Attraction</th>
-                <th>Server Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Server Name</th>
+                        <th>Server Timezone</th>
+                        <th>Population</th>
+                        <th>Server Attraction</th>
+                        <th>Server Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Pagle</td>
-                <td>EST</td>
-                <td>High Population </td>
-                <td>"Pagle is a fishing trainer. Fishing? This PvE realm is Hype"</td>
-                <td><a href="http://pagle.classicdiscord.com">http://pagle.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Pagle</td>
+                        <td>EST</td>
+                        <td>High Population </td>
+                        <td>"Pagle is a fishing trainer. Fishing? This PvE realm is Hype"</td>
+                        <td>
+                            <a href="http://pagle.classicdiscord.com">http://pagle.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Mankrik</td>
-                <td>EST</td>
-                <td>Medium Population </td>
-                <td>"Where's Mankrik's Wife? Enough said, You're playing here."</td>
-                <td><a href="http://mankrik.classicdiscord.com">http://mankrik.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Mankrik</td>
+                        <td>EST</td>
+                        <td>Medium Population </td>
+                        <td>"Where's Mankrik's Wife? Enough said, You're playing here."</td>
+                        <td>
+                            <a href="http://mankrik.classicdiscord.com">http://mankrik.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-               <tr>
-                <td>Atiesh</td>
-                <td>PST</td>
-                <td>Medium Population </td>
-                <td>"I failed humanity once before...and I will NOT do so again. If you cannot take up this cup, then I shall find another who will"</td>
-                <td><a href="http://atiesh.classicdiscord.com">http://atiesh.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Atiesh</td>
+                        <td>PST</td>
+                        <td>Medium Population </td>
+                        <td>"I failed humanity once before...and I will NOT do so again. If you cannot take up this cup, then
+                            I shall find another who will"</td>
+                        <td>
+                            <a href="http://atiesh.classicdiscord.com">http://atiesh.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Myzrael</td>
-                <td>PST</td>
-                <td>Medium Population </td>
-                <td>"Saving the princess is literally the worst, WORST quest in Arathi. But hey, do it anyway, and roll Myzrael"</td>
-                <td><a href="http://myzrael.classicdiscord.com">http://myzrael.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Myzrael</td>
+                        <td>PST</td>
+                        <td>Medium Population </td>
+                        <td>"Saving the princess is literally the worst, WORST quest in Arathi. But hey, do it anyway, and roll
+                            Myzrael"</td>
+                        <td>
+                            <a href="http://myzrael.classicdiscord.com">http://myzrael.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                </tbody>
+            </table>
         </div>
-      </section>
+    </section>
 
 
-      <section id ="arp">
+    <section id="arp">
         <!--for demo wrap-->
         <h1>American RP Realms</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Server Name</th>
-                <th>Server Timezone</th>
-                <th>Population</th>
-                <th>Server Attraction</th>
-                <th>Server Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Server Name</th>
+                        <th>Server Timezone</th>
+                        <th>Population</th>
+                        <th>Server Attraction</th>
+                        <th>Server Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Grobbulusn {PvP-RP}</td>
-                <td>PST</td>
-                <td>High Population </td>
-                <td>"PvP + RP ? -> The Modern Emerald Dream"</td>
-                <td><a href="http://grobbulus.classicdiscord.com">http://grobbulus.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Grobbulusn {PvP-RP}</td>
+                        <td>PST</td>
+                        <td>High Population </td>
+                        <td>"PvP + RP ? -> The Modern Emerald Dream"</td>
+                        <td>
+                            <a href="http://grobbulus.classicdiscord.com">http://grobbulus.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Bloodsail Buccaneers {RP}</td>
-                <td>EST</td>
-                <td>Medium Population </td>
-                <td>"For the Truest of Rpers. (Don't tell Grobbulus)"</td>
-                <td><a href="http://bloodsail.classicdiscord.com">http://bloodsail.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Bloodsail Buccaneers {RP}</td>
+                        <td>EST</td>
+                        <td>Medium Population </td>
+                        <td>"For the Truest of Rpers. (Don't tell Grobbulus)"</td>
+                        <td>
+                            <a href="http://bloodsail.classicdiscord.com">http://bloodsail.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                </tbody>
+            </table>
         </div>
-      </section>
+    </section>
 
-       <section id ="aus">
+    <section id="aus">
         <!--for demo wrap-->
         <h1>Oceanic Realms</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Server Name</th>
-                <th>Server Timezone</th>
-                <th>Population</th>
-                <th>Server Attraction</th>
-                <th>Server Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Server Name</th>
+                        <th>Server Timezone</th>
+                        <th>Population</th>
+                        <th>Server Attraction</th>
+                        <th>Server Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Arugal {PvP}</td>
-                <td>Oceanic</td>
-                <td>Medium Population </td>
-                <td>"Arugal is a both an archmage and a werewolf, so you know this realm will be Lit for PvP"</td>
-                <td><a href="http://arugal.classicdiscord.com">http://arugal.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Arugal {PvP}</td>
+                        <td>Oceanic</td>
+                        <td>Medium Population </td>
+                        <td>"Arugal is a both an archmage and a werewolf, so you know this realm will be Lit for PvP"</td>
+                        <td>
+                            <a href="http://arugal.classicdiscord.com">http://arugal.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Remulos {PvE}</td>
-                <td>Oceanic</td>
-                <td>Medium Population </td>
-                <td>"I am Remulos, Son! of ... Cenarius .. Keeper! of the Grove. Cenarius Realm -> Best Realm"</td>
-                <td><a href="http://remulos.classicdiscord.com">http://remulos.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Remulos {PvE}</td>
+                        <td>Oceanic</td>
+                        <td>Medium Population </td>
+                        <td>"I am Remulos, Son! of ... Cenarius .. Keeper! of the Grove. Cenarius Realm -> Best Realm"</td>
+                        <td>
+                            <a href="http://remulos.classicdiscord.com">http://remulos.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                </tbody>
+            </table>
         </div>
-      </section>
+    </section>
 
-      
-<section id = "eupvp">
+
+    <section id="eupvp">
         <!--for demo wrap-->
         <h1>European PvP Realms</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Server Name</th>
-                <th>Server Timezone</th>
-                <th>Population</th>
-                <th>Server Attraction</th>
-                <th>Server Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Server Name</th>
+                        <th>Server Timezone</th>
+                        <th>Population</th>
+                        <th>Server Attraction</th>
+                        <th>Server Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Golemagg</td>
-                <td>UK</td>
-                <td>High Population </td>
-                <td>"The UK version of the Herod server. Top Private server PvP guilds play here"</td>
-                <td><a href="http://golemagg.classicdiscord.com">http://golemagg.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Golemagg</td>
+                        <td>UK</td>
+                        <td>High Population </td>
+                        <td>"The UK version of the Herod server. Top Private server PvP guilds play here"</td>
+                        <td>
+                            <a href="http://golemagg.classicdiscord.com">http://golemagg.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Shazzrah</td>
-                <td>UK</td>
-                <td>Medium Population </td>
-                <td>"The UK version of the Whitemane server. Hardcore PvP, but lesser population"</td>
-                <td><a href="http://.shazzrah.classicdiscord.com">http://shazzrah.classicdiscord.com</a></td>
-              </tr>
-              
-              <tr>
-                <td>Sulfuron</td>
-                <td>France</td>
-                <td>High Population </td>
-                <td>"HAND OF RAGNAROS!!"</td>
-                <td><a href="http://sulfuron.classicdiscord.com">http://sulfuron.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Shazzrah</td>
+                        <td>UK</td>
+                        <td>Medium Population </td>
+                        <td>"The UK version of the Whitemane server. Hardcore PvP, but lesser population"</td>
+                        <td>
+                            <a href="http://.shazzrah.classicdiscord.com">http://shazzrah.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Lucifron</td>
-                <td>Germany</td>
-                <td>Medium Population</td>
-                <td>"HAND OF LUCIFER!!"</td>
-                <td><a href="http://lucifron.classicdiscord.com">http://lucifron.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Sulfuron</td>
+                        <td>France</td>
+                        <td>High Population </td>
+                        <td>"HAND OF RAGNAROS!!"</td>
+                        <td>
+                            <a href="http://sulfuron.classicdiscord.com">http://sulfuron.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Flamegor</td>
-                <td>Russia</td>
-                <td>Medium Population</td>
-                <td>"Russia server best server. Cyrllic is the superior alphabet."</td>
-                <td><a href="http://flamegor.classicdiscord.com">http://flamegor.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Lucifron</td>
+                        <td>Germany</td>
+                        <td>Medium Population</td>
+                        <td>"HAND OF LUCIFER!!"</td>
+                        <td>
+                            <a href="http://lucifron.classicdiscord.com">http://lucifron.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                    <tr>
+                        <td>Flamegor</td>
+                        <td>Russia</td>
+                        <td>Medium Population</td>
+                        <td>"Russia server best server. Cyrllic is the superior alphabet."</td>
+                        <td>
+                            <a href="http://flamegor.classicdiscord.com">http://flamegor.classicdiscord.com</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
-      </section>
+    </section>
 
 
- <section id ="eupve">
+    <section id="eupve">
         <!--for demo wrap-->
         <h1>European PvE Realms</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Server Name</th>
-                <th>Server Timezone</th>
-                <th>Population</th>
-                <th>Server Attraction</th>
-                <th>Server Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Server Name</th>
+                        <th>Server Timezone</th>
+                        <th>Population</th>
+                        <th>Server Attraction</th>
+                        <th>Server Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Mirage Raceway</td>
-                <td>UK</td>
-                <td>Medium Population </td>
-                <td>"Shimmering flats is the worst zone on PvP servers. Thankfully, you are on a PvE server, so this server is awesome!"</td>
-                <td><a href="http://mirage.classicdiscord.com">http://mirage.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Mirage Raceway</td>
+                        <td>UK</td>
+                        <td>Medium Population </td>
+                        <td>"Shimmering flats is the worst zone on PvP servers. Thankfully, you are on a PvE server, so this
+                            server is awesome!"</td>
+                        <td>
+                            <a href="http://mirage.classicdiscord.com">http://mirage.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Pyrewood Village</td>
-                <td>UK</td>
-                <td>Medium Population </td>
-                <td>"You better party up before you venture into Pyrewood. PvE Server!"</td>
-                <td><a href="http://pyrewood.classicdiscord.com">http://pyrewood.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Pyrewood Village</td>
+                        <td>UK</td>
+                        <td>Medium Population </td>
+                        <td>"You better party up before you venture into Pyrewood. PvE Server!"</td>
+                        <td>
+                            <a href="http://pyrewood.classicdiscord.com">http://pyrewood.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-               <tr>
-                <td>Auberdine</td>
-                <td>France</td>
-                <td>Medium Population </td>
-                <td>"Auberdine sounds french, it also sounds sophisticated. PvE Extravaganza."</td>
-                <td><a href="http://auberdine.classicdiscord.com">http://auberdine.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Auberdine</td>
+                        <td>France</td>
+                        <td>Medium Population </td>
+                        <td>"Auberdine sounds french, it also sounds sophisticated. PvE Extravaganza."</td>
+                        <td>
+                            <a href="http://auberdine.classicdiscord.com">http://auberdine.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Everlook</td>
-                <td>Germany</td>
-                <td>Medium Population </td>
-                <td>"A nice, snowy town in Winterspring. Coud be practically be a town in Germany."</td>
-                <td><a href="http://everlook.classicdiscord.com">http://everlook.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Everlook</td>
+                        <td>Germany</td>
+                        <td>Medium Population </td>
+                        <td>"A nice, snowy town in Winterspring. Coud be practically be a town in Germany."</td>
+                        <td>
+                            <a href="http://everlook.classicdiscord.com">http://everlook.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-                <tr>
-                <td>Chromie</td>
-                <td>Russia</td>
-                <td>Medium Population </td>
-                <td>"Someone once said that you can't go home again. But they lacked vision. And a temporal discombobulator!"</td>
-                <td><a href="http://chromie.classicdiscord.com">http://chromie.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Chromie</td>
+                        <td>Russia</td>
+                        <td>Medium Population </td>
+                        <td>"Someone once said that you can't go home again. But they lacked vision. And a temporal discombobulator!"</td>
+                        <td>
+                            <a href="http://chromie.classicdiscord.com">http://chromie.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                </tbody>
+            </table>
         </div>
-      </section>
+    </section>
 
 
-      
-      <section id ="eurp">
+
+    <section id="eurp">
         <!--for demo wrap-->
         <h1>European RP Realms</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Server Name</th>
-                <th>Server Timezone</th>
-                <th>Population</th>
-                <th>Server Attraction</th>
-                <th>Server Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Server Name</th>
+                        <th>Server Timezone</th>
+                        <th>Population</th>
+                        <th>Server Attraction</th>
+                        <th>Server Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Zandalar Tribe {PvP-RP}</td>
-                <td>UK</td>
-                <td>High Population </td>
-                <td>"PvP + RP ? -> The Modern {EU} Emerald Dream"</td>
-                <td><a href="http://zandalar.classicdiscord.com">http://zandalar.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Zandalar Tribe {PvP-RP}</td>
+                        <td>UK</td>
+                        <td>High Population </td>
+                        <td>"PvP + RP ? -> The Modern {EU} Emerald Dream"</td>
+                        <td>
+                            <a href="http://zandalar.classicdiscord.com">http://zandalar.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Hydraxian {RP}</td>
-                <td>EST</td>
-                <td>Medium Population </td>
-                <td>"For the Truest of Rpers. (Don't tell Grobbulus)"</td>
-                <td><a href="http://hydraxian.classicdiscord.com">http://hydraxian.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Hydraxian {RP}</td>
+                        <td>EST</td>
+                        <td>Medium Population </td>
+                        <td>"For the Truest of Rpers. (Don't tell Grobbulus)"</td>
+                        <td>
+                            <a href="http://hydraxian.classicdiscord.com">http://hydraxian.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                </tbody>
+            </table>
         </div>
-      </section>
+    </section>
 
-      <section id ="cls">
+    <section id="cls">
         <!--for demo wrap-->
         <h1>European RP Realms</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Raid Specs</th>
-                <th>PvP Specs</th>
-                <th>Class Stereotype</th>
-                <th>Class Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Raid Specs</th>
+                        <th>PvP Specs</th>
+                        <th>Class Stereotype</th>
+                        <th>Class Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Warrior</td>
-                <td>Prot Tank / Fury Warrior / Arms Warrior</td>
-                <td>Shield Slam Meme / 2H Mortal Strike</td>
-                <td>"Leaders or people wanting to be leaders"</td>
-                <td><a href="http://warrior.classicdiscord.com">http://warrior.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Warrior</td>
+                        <td>Prot Tank / Fury Warrior / Arms Warrior</td>
+                        <td>Shield Slam Meme / 2H Mortal Strike</td>
+                        <td>"Leaders or people wanting to be leaders"</td>
+                        <td>
+                            <a href="http://warrior.classicdiscord.com">http://warrior.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Paladins</td>
-                <td>Healers, Meme Ret Dps, Met Off Tank</td>
-                <td>Holy / Ret</td>
-                <td>"Twitch.tv/EsfandTv"</td>
-                <td><a href="http://paladin.classicdiscord.com">http://paladin.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Paladins</td>
+                        <td>Healers, Meme Ret Dps, Met Off Tank</td>
+                        <td>Holy / Ret</td>
+                        <td>"Twitch.tv/EsfandTv"</td>
+                        <td>
+                            <a href="http://paladin.classicdiscord.com">http://paladin.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-               <tr>
-                <td>Shaman</td>
-                <td>Healers, Meme Enh Dps</td>
-                <td>Ele/Resto / Enh</td>
-                <td>"Woke people looking to have a good time"</td>
-                <td><a href="http://shaman.classicdiscord.com">http://shaman.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Shaman</td>
+                        <td>Healers, Meme Enh Dps</td>
+                        <td>Ele/Resto / Enh</td>
+                        <td>"Woke people looking to have a good time"</td>
+                        <td>
+                            <a href="http://shaman.classicdiscord.com">http://shaman.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-               <tr>
-                <td>Hunters</td>
-                <td>DPS / Boss Mechanics</td>
-                <td>BM/Surv/Marks</td>
-                <td>"Typically known as idiots rping as legolas & their pet pulls trash and wipes the whole raid"</td>
-                <td><a href="http://hunter.classicdiscord.com">http://hunter.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Hunters</td>
+                        <td>DPS / Boss Mechanics</td>
+                        <td>BM/Surv/Marks</td>
+                        <td>"Typically known as idiots rping as legolas & their pet pulls trash and wipes the whole raid"</td>
+                        <td>
+                            <a href="http://hunter.classicdiscord.com">http://hunter.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Mage</td>
-                <td>DPS</td>
-                <td>Diverse talent specs</td>
-                <td>"-> in a nutshell -> https://www.youtube.com/watch?v=xVcLFDvyptY"</td>
-                <td><a href="http://mage.classicdiscord.com">http://mage.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Mage</td>
+                        <td>DPS</td>
+                        <td>Diverse talent specs</td>
+                        <td>"-> in a nutshell -> https://www.youtube.com/watch?v=xVcLFDvyptY"</td>
+                        <td>
+                            <a href="http://mage.classicdiscord.com">http://mage.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-               <tr>
-                <td>Priest</td>
-                <td>Healers / Shadow</td>
-                <td>Healers / Control / Shadow</td>
-                <td>"Laid back chill people who support you or help you melt faces as shadow"</td>
-                <td><a href="http://priest.classicdiscord.com">http://priest.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Priest</td>
+                        <td>Healers / Shadow</td>
+                        <td>Healers / Control / Shadow</td>
+                        <td>"Laid back chill people who support you or help you melt faces as shadow"</td>
+                        <td>
+                            <a href="http://priest.classicdiscord.com">http://priest.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-                 <tr>
-                <td>Rogue</td>
-                <td>Dps</td>
-                <td>Sub or Assass</td>
-                <td>"Loners, but also DPS hungry players. Sometimes Ninjas."</td>
-                <td><a href="http://rogue.classicdiscord.com">http://rogue.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Rogue</td>
+                        <td>Dps</td>
+                        <td>Sub or Assass</td>
+                        <td>"Loners, but also DPS hungry players. Sometimes Ninjas."</td>
+                        <td>
+                            <a href="http://rogue.classicdiscord.com">http://rogue.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-                  <tr>
-                <td>Warlock</td>
-                <td>Dps</td>
-                <td>SL/SM Ruin/Conflag</td>
-                <td>"If you attack them, best case scenario is you both die. Can wipe raid by pulling too much threat."</td>
-                <td><a href="http://warlock.classicdiscord.com">http://warlock.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Warlock</td>
+                        <td>Dps</td>
+                        <td>SL/SM Ruin/Conflag</td>
+                        <td>"If you attack them, best case scenario is you both die. Can wipe raid by pulling too much threat."</td>
+                        <td>
+                            <a href="http://warlock.classicdiscord.com">http://warlock.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                </tbody>
+            </table>
         </div>
-      </section>
+    </section>
 
-          
-          <section id ="etc">
+
+    <section id="etc">
         <!--for demo wrap-->
         <h1>Other Resources</h1>
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <thead>
-              <tr>
-                <th>Channel Topic</th>
-                <th></th>
-                <th>Why you should join</th>
-                <th></th>
-                <th>Server Discord</th>
-              </tr>
-            </thead>
-          </table>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Channel Topic</th>
+                        <th></th>
+                        <th>Why you should join</th>
+                        <th></th>
+                        <th>Server Discord</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
         <div class="tbl-content">
-          <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-              <tr>
-                <td>Theorycrafting</td>
-                <td></td>
-                <td>For players that love to min/max their characters to the highest</td>
-                <td></td>
-                <td><a href="http://theorycrafting.classicdiscord.com">http://theorycrafting.classicdiscord.com</a></td>
-              </tr>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>Theorycrafting</td>
+                        <td></td>
+                        <td>For players that love to min/max their characters to the highest</td>
+                        <td></td>
+                        <td>
+                            <a href="http://theorycrafting.classicdiscord.com">http://theorycrafting.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-              <tr>
-                <td>Class Guild Recruitment</td>
-                <td></td>
-                <td>Looking for a Guild ? Say no more, we have you covered</td>
-                <td></td>
-                <td><a href="http://guilds.classicdiscord.com">http://guilds.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Class Guild Recruitment</td>
+                        <td></td>
+                        <td>Looking for a Guild ? Say no more, we have you covered</td>
+                        <td></td>
+                        <td>
+                            <a href="http://guilds.classicdiscord.com">http://guilds.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-                <tr>
-                <td>Twinking</td>
-                <td></td>
-                <td>Do you love PvP at 19/29/39/49/59?.</td>
-                <td></td>
-                <td><a href="http://twinks.classicdiscord.com">http://twinks.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Twinking</td>
+                        <td></td>
+                        <td>Do you love PvP at 19/29/39/49/59?.</td>
+                        <td></td>
+                        <td>
+                            <a href="http://twinks.classicdiscord.com">http://twinks.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-                <tr>
-                <td>Europe Classic WoW Discord</td>
-                <td></td>
-                <td>Socialize with other EU players.</td>
-                <td></td>
-                <td><a href="http://europe.classicdiscord.com">http://europe.classicdiscord.com</a></td>
-              </tr>
+                    <tr>
+                        <td>Europe Classic WoW Discord</td>
+                        <td></td>
+                        <td>Socialize with other EU players.</td>
+                        <td></td>
+                        <td>
+                            <a href="http://europe.classicdiscord.com">http://europe.classicdiscord.com</a>
+                        </td>
+                    </tr>
 
-            </tbody>
-          </table>
+                </tbody>
+            </table>
         </div>
-      </section>
-      
-   
+    </section>
 
 
 
@@ -633,5 +725,8 @@ Quick Other Navigation Links-> <a href="#cls">Class Discords |</a> <a href="#etc
 
 
 
-    </body>
-    </html>
+
+
+</body>
+
+</html>
